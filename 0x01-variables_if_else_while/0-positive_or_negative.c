@@ -3,11 +3,10 @@
 #include <time.h>
 /* more headers goes there */
 
-/*
-* main - this is main
-* Description: this is des
-* Return: 0
-*
+/**
+ * main - entry point
+ * Description: print some words
+ * Return: (0) - success
 */
 int main(void)
 {
