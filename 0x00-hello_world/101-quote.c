@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<unistd.h>
 /**
  * main - entry point
  * Description: print some words
@@ -7,9 +8,7 @@
 int main(void)
 {
 	char *s = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	int i = 0;
 
-	while (s[i])
-		putchar(s[i++]);
+	write(2, s, sizeof(s));
 	return (0);
 }
