@@ -10,6 +10,6 @@ int main(void)
 	int i = 0;
 
 	while (s[i])
-		putc(s[i++], stdout);
+		putchar(s[i++]);
 	return (0);
 }
