@@ -5,10 +5,10 @@
  * standard output
  * Returna: void
 */
-void main(void)
+void jack_bauer(void)
 {
 	int i = 0, j;
-	
+
 	for (; i < 24; i++)
 	{
 		for (j = 0; j < 60; j++)
