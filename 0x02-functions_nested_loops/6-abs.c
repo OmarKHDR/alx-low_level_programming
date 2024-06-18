@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_sign - my func
+ * _abs - my func
  * @n: the arg
  * Description: This function uses _putchar to print to the
  * standard output
@@ -8,20 +8,13 @@
 */
 int _abs(int n)
 {
-	if (n > 0)
+	if (n >= 0)
 	{
-		_putchar("+");
-		return (1);
-	}
-	else if (n == 0)
-	{
-		_putchar("0");
-		return (0);
+		return (n);
 	}
 	else
 	{
-		_putchar("-");
-		return (-1);
+		return (-1 * n);
 	}
 
 	return (0);
