@@ -2,10 +2,9 @@
 
 int main()
 {
-	for(int i = 'a';i<= 'z';i++)
-		printf("%d ",_islower(i));
+	for(int i = 'a';i<= 200;i++)
+		printf("%c %d \n",i,_isalpha(i));
 	putchar('\n');
-	for(int i = 'A';i<= 'Z';i++)
-		printf("%d ",_islower(i));
+	
 	return 0;
 }
