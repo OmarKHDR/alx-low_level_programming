@@ -2,7 +2,6 @@
 
 /**
 * main - causes an infinite loop
-* Description: mainn ww func
 * Return: 0
 */
 
