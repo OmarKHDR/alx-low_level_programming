@@ -5,7 +5,7 @@
 * main - main
 * Description: Description
 * @argv: arg array
-* @argc: count
+* @args: count
 * Return: 0
 */
 
