@@ -1,0 +1,5 @@
+#!/bin/bash
+chmod u+x $0
+git add .
+git commit -m "$0"
+git push
