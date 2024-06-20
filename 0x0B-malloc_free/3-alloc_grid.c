@@ -15,10 +15,18 @@ int **alloc_grid(int width, int height)
 	int **arrptr = (int **)calloc(height, sizeof(int *));
 
 	if (width <= 0 || height <= 0)
+	{
+		free(arrptr);
 		return (NULL);
+	}
 	for (i = 0; i < height; i++)
 	{
 		arrptr[i] = (int *)calloc(width, sizeof(int));
+		if (arrptr[i] == NULL)
+		{
+			free(arrptr);
+			return (NULL);
+		}
 	}
 
 	return (arrptr);
