@@ -24,6 +24,11 @@ int **alloc_grid(int width, int height)
 		arrptr[i] = (int *)calloc(width, sizeof(int));
 		if (arrptr[i] == NULL)
 		{
+			while (i >= 0)
+			{
+				free(arrptr[i]);
+				i--;
+			}
 			free(arrptr);
 			return (NULL);
 		}
