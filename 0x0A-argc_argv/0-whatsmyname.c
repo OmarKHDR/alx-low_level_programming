@@ -13,5 +13,5 @@ int main(int argc, char **argv)
 {
 	printf("%s\n", argv[0]);
 	(void)argc;
-	return (0);
+	return (EXIT_SUCCESS);
 }
