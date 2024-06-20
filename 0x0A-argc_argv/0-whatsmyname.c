@@ -9,9 +9,9 @@
 * Return: 0
 */
 
-int main(int argc, char **argv)
+int main(int args, char **argv)
 {
 	printf("%s\n", argv[0]);
-	(void)argc;
+	(void)args;
 	return (EXIT_SUCCESS);
 }
