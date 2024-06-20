@@ -11,10 +11,10 @@
 
 int **alloc_grid(int width, int height)
 {
-	int i;
-
 	if (width <= 0 || height <= 0)
 		return (NULL);
+
+	int i;
 	int **arrptr = (int **)calloc(height, sizeof(int *));
 
 	for (i = 0; i < height; i++)
