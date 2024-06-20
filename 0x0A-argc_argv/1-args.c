@@ -5,13 +5,13 @@
 * main - main
 * Description: Description
 * @argv: arg array
-* @argc: count
+* @args: count
 * Return: 0
 */
 
 int main(int args, char **argv)
 {
-	printf("%d\n", args-1);
+	printf("%d\n", args - 1);
 	(void)args;
 	return (EXIT_SUCCESS);
 }
