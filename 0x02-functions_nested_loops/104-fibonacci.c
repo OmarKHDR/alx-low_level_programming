@@ -17,7 +17,7 @@ int fibb(int i)
 	printf("%d, %d", 1, 2);
 	for (j = 2; j < i; j++)
 	{
-		printf(", ");
+		printf("\n%d = ",j);
 		fib_new_low = fib1_low + fib2_low;
 		fib_new_high = fib1_high + fib2_high + fib_new_low / 1000000000;
 		fib_new_low = fib_new_low % 1000000000;
