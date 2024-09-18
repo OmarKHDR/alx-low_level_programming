@@ -1,6 +1,14 @@
 #include "main.h"
 #include "main.h"
 
+/**
+ * wildcmp - A function that returns the number
+ * @s1: The number in the base
+ * @s2: The power
+ *
+ * Return: It returns the result of number
+*/
+
 int wildcmp(char *s1, char *s2)
 {
 	if (!(*s1) && !(*s2))
