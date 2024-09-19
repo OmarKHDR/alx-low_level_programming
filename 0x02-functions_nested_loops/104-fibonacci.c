@@ -1,47 +1,65 @@
-#include <stdio.h>
-#define MAX 100000000
+#include "main.h"
 
 /**
-* fibb - fibb just it
-* @i: it's a number
-* Description: it is what it is
-* Return: a number
+ * numLength - A function that returns the length of an intger
+ * @num: The number that we want to get its length
+ * Description: it uses dividing method to get the length
+ * with some loops
+ * Return: It returns the length of the integer
 */
 
-int fibb(int i)
+int numLength(int num)
 {
-	unsigned long int fib1_low = 1, fib2_low = 2, fib_new_low = 0;
-	unsigned long int fib1_high = 0, fib2_high = 0, fib_new_high = 0;
-	int j;
+	int length = 0;
 
-	printf("%d, %d", 1, 2);
-	for (j = 2; j < i; j++)
+	if (!num)
+		return (1);
+	while (num)
+
 	{
-		printf("\n%d = ",j);
-		fib_new_low = fib1_low + fib2_low;
-		fib_new_high = fib1_high + fib2_high + fib_new_low / 1000000000;
-		fib_new_low = fib_new_low % 1000000000;
-		fib1_low = fib2_low;
-		fib1_high = fib2_high;
-		fib2_low = fib_new_low;
-		fib2_high = fib_new_high;
-		if (fib_new_high == 0)
-			printf("%lu", fib_new_low);
-		else
-			printf("%lu%lu", fib_new_high, fib_new_low);
+		num = num / 10;
+		length = length + 1;
 	}
-	return (0);
+	return (length);
 }
 
 /**
-* main - main just it
-* Description: it is what it is
-* Return: a number
+ * main - entry point
+ * Description: A function that prints the fib series
+ * for long numbers without using long long but with splitting
+ * the integer into two parts
+ * Return: Always returns 0 (Success)
 */
 
 int main(void)
 {
-	fibb(100);
-	printf("\n");
+	unsigned long f1 = 1, f2 = 2, tmp, mx = 100000000, f1o = 0, f2o = 0, tmpo = 0;
+	short int i = 1, initials0s;
+
+	while (i <= 98)
+	{
+		if (f1o > 0)
+			printf("%lu", f1o);
+		initials0s = numLength(mx) - 1 - numLength(f1);
+		while (f1o > 0 && initials0s > 0)
+		{
+			printf("%i", 0);
+			initials0s = initials0s - 1;
+		}
+		printf("%lu", f1);
+
+		tmp = (f1 + f2) % mx;
+		tmpo = f1o + f2o + (f1 + f2) / mx;
+		f1 = f2;
+		f1o = f2o;
+		f2 = tmp;
+		f2o = tmpo;
+
+		if (i != 98)
+			printf(", ");
+		else
+			printf("\n");
+		i++;
+	}
 	return (0);
 }
